@@ -1,6 +1,6 @@
 yii2-tree-view
 ==============
-Виджет tree-view. CTreeview из yii1 для yii2. 
+Виджет tree-view. CTreeview из yii1 для yii2. Используеться [jquery-treeview](https://github.com/jzaefferer/jquery-treeview) . [CTreeview](http://www.yiiframework.com/doc/api/1.1/CTreeView)
 
 Installation
 ------------
@@ -28,4 +28,4 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \lesha724\treeview\AutoloadExample::widget(); ?>```
+<?= \lesha724\treeview\TreeView::widget(); ?>```
