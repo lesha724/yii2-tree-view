@@ -117,9 +117,9 @@ class TreeView extends \yii\base\Widget
         parent::init();
 
         if(isset($this->htmlOptions['id']))
-            $_id=$this->htmlOptions['id'];
+            $this->_id=$this->htmlOptions['id'];
         else
-            $_id=$this->htmlOptions['id']=$this->getId();
+            $this->_id=$this->htmlOptions['id']=$this->getId();
     }
 
     public function run()
@@ -127,12 +127,9 @@ class TreeView extends \yii\base\Widget
         parent::run();
 
         $view = $this->getView();
+        if($this->cssFile!==null)
+            TreeViewAsset::$customCss =  $this->cssFile;
         TreeViewAsset::register($view);
-
-        if($this->cssFile===null)
-            $view->registerCssFile('@vendor/lesha724/yii2-tree-view/assets/treeview/treeview/jquery.treeview.css');
-        elseif($this->cssFile!==false)
-            $view->registerCssFile($this->cssFile);
 
         $options = $this->_getClientOptions();
         $options=$options===[]?'{}' : Json::encode($options);
