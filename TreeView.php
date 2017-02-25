@@ -1,7 +1,7 @@
 <?php
 
 namespace lesha724\treeview;
-use conquer\helpers\Json;
+use yii\helpers\Json;
 use yii\helpers\Html;
 use yii\web\View;
 
